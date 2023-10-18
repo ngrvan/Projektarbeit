@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= mytite %></title>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="/css/styles.css" />
+<link rel="stylesheet" href="/css/infoStyle.css" />
+  
+
+
+</head>
+
+  <body>
+    <%- include("./partials/header.ejs") %>
+
+    <h2>AuftragsInfo</h2>
+
+    <div class="card">
+      <p>
+        <strong>Auftrags-ID:</strong>
+        <span id="auftrags-id"><%= objekt_Auftrag.Auftrag_id %></span>
+      </p>
+      <p>
+        <strong>Kunde-ID:</strong>
+        <span id="auftrags-id"><%= objekt_Auftrag.Kunde_ID%></span>
+      </p>
+      <p>
+        <strong>Gewünschte Lieferzeit:</strong>
+        <span id="lieferzeit"><%= objekt_Auftrag.Lieferdatum %></span>
+      </p>
+      <p><strong>Anzahl:</strong> <span id="anzahl"></span></p>
+      <p>
+        <strong>ankommenDatum für Teile:</strong>
+        <span id="ankommenDatum"></span>
+      </p>
+    </div>
+
+    <div class="abteilung_container">
+      <div class="Service_Disk">
+        <h2>Service Desk</h2>
+        <p><strong>Status:</strong> <span id="status">Open</span></p>
+        <p>
+          <strong>To Do:</strong>
+          <span id="serviceSelectToDo"
+            ><select
+              id="serviceSelect"
+              class="select"
+            
+            ></select
+          ></span>
+        </p>
+        <p>
+          <strong>Ende der Aufgabe:</strong>
+          <span id="ende">wird von der Abteilung eingetragen</span>
+        </p>
+        
+        
+       
+      </div>
+
+      <div class="System_Configiration">
+        <h2>System Configiration</h2>
+        <p><strong>Status:</strong> <span id="status">Open</span></p>
+        <p>
+          <strong>To Do:</strong>
+          <span id="SystemConfSelectToDo"
+            ><select
+              id="SystemConfSelect"
+              class="select"
+           
+            ></select>
+          </span>
+        </p>
+        <p>
+          <strong>Ende der Aufgabe:</strong>
+          <span id="ende">wird von der Abteilung eingetragen</span>
+        </p>
+        
+      </div>
+      <div class="Profisional_Services">
+        <h2>Professional Services</h2>
+        <p><strong>Status:</strong> <span id="status">Open</span></p>
+        <p>
+          <strong>To Do:</strong>
+          <span id="profisionalSelectToDo"
+            ><select
+              id="profisionalSelect"
+              class="select"
+            
+            ></select>
+          </span>
+        </p>
+        <p>
+          <strong>Ende der Aufgabe:</strong>
+          <span id="ende">wird von der Abteilung eingetragen</span>
+        </p>
+        
+      </div>
+      <div class="Logistik">
+        <h2>Logistik</h2>
+        <p><strong>Status:</strong> <span id="status">Open</span></p>
+        <p>
+          <strong>To Do:</strong>
+          <span id="logistikSelectToDo"
+            ><select
+              id="logistikSelect"
+              class="select"
+              
+            ></select
+          ></span>
+        </p>
+        <p>
+          <strong>Ende der Aufgabe:</strong>
+          <span id="ende">wird von der Abteilung eingetragen</span>
+        </p>
+        
+        
+      </div>
+    </div>
+    
+    <div class="button">
+    <a href="/update/<%= objekt_Auftrag._id %>" id="update" >Update</a>
+    <button data-linkid="<%= objekt_Auftrag._id %>" class="Delete">
+      Löschen
+    </button>
+    
+  </div>
+    <%- include("./partials/footer.ejs") %>
+
+    <script src="/js/information.js">
+      
+    </script>
+  </body>
+</html>

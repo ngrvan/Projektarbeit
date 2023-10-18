@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= mytite %></title>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="/css/styles.css" />
+<link rel="stylesheet" href="/css/neueKundeStyle.css" />
+  
+
+  <body id="body">
+    <%- include("./partials/header.ejs") %>
+
+    <main id="main">
+      <h1 id="H_neuekunde">Update</h1>
+      <section class="S_neuekunde">
+        <form id="meinFormular" method="post" action="/alle">
+          <label class="requerd" for="Auftrag_id">Auftrag_ID: </label>
+          <input
+            class="input"
+            name="Auftrag_id"
+            required
+            id="Auftrag_id"
+            type="text"
+          />
+
+          <label class="requerd" for="Kunde_ID">Kunde_ID: </label>
+          <input
+            class="input"
+            name="Kunde_ID"
+            id="Kunde_ID"
+            required
+            type="text"
+          />
+
+          <label class="requerd" for="Lieferdatum">Lieferdatum: </label>
+          <input name="Lieferdatum" id="Lieferdatum" required type="date" />
+          <label class="requerd" for="Anzahl"
+                >Anzahl:
+              </label>
+              <input
+                name="Anzahl"
+                class="Anzahl"
+                type="number"
+                id="anzahl"
+                required
+              />
+
+              <label for="ankommendeDatum"
+              >Datum der ankommende Teile:
+            </label>
+            <input
+              name="ankommendeDatum"
+              class="ankommendeDatum"
+              type="date"
+              id="ankommenDatum"
+            />
+            <label  for="logistikID"
+                >Logistik_ID:
+              </label>
+              <input
+                name="logistikID"
+                id="logistikID"
+                class="input"
+                type="text"
+                pattern="[A-Za-z]{3}[0-9]{7}" 
+              
+              />
+              <label  for="serviceDiskID"
+              >Service Disk ID:
+            </label>
+            <input
+              name="serviceDiskID"
+              id="serviceDiskID"
+              class="input"
+              type="text"
+              pattern="[A-Za-z]{3}[0-9]{7}" 
+             
+            />
+            <label  for="systemKonfigirationID"
+            >Systemconfigiration_ID:
+          </label>
+          <input
+            name="systemKonfigirationID"
+            id="systemKonfigirationID"
+            class="input"
+            type="text"
+            pattern="[A-Za-z]{3}[0-9]{7}" 
+         
+          />
+          <label  for="profisionalServiceID"
+          >Profosionalservice_ID:
+        </label>
+        <input
+          name="profisionalServiceID"
+          id="profisionalServiceID"
+          class="input"
+          type="text"
+          pattern="[A-Za-z]{3}[0-9]{7}" 
+          
+        />
+         
+          <button
+            data-linkid="<%= obAuftrag._id %>"
+            id="btn"
+            class="create"
+            type="submit"
+          >
+            Update
+          </button>
+        </form>
+      </section>
+      <%- include("./partials/footer.ejs") %>
+      <script src="/js/update.js">
+     
+      </script>
+    </main>
+  </body>
+</html>
