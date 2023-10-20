@@ -21,19 +21,6 @@
  .abteilung_container div p{
     padding-bottom: 15px;
     } 
-    .Delete{
-    background-color: red;
-    margin-left: auto;
-    margin-top: auto;
-    position: fixed;
-    }
-    .Delete:hover{
-    background-color: white;
-    margin-left: auto;
-    margin-top: auto;
-    position: fixed;
-    cursor: pointer;
-    }
     .card p{
         display: inline-block;
         margin-left: 200px;
@@ -48,13 +35,82 @@
         color: #fff;
         text-align: center;
         } 
-         
-#update{
-    border: 2px solid black;
-    background-color: red;
-    color: #0d0d0d;
-    text-decoration: none;
-  }
-  #update:hover{
-  background-color: #f3eded;
-  }
+        #update {
+           background-color:rgb(214, 55, 55) ;
+            border: 2px solid rgb(255, 62, 62);
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 25px;
+            text-decoration: none;
+            color: #fff
+          }
+        
+          #update:hover {
+            background-color: rgb(214, 55, 55);
+            cursor: pointer;
+            font-size: 26px;
+            
+          }
+        
+          #update:active {
+            transform: scale(0.9);
+            background-color: tomato;
+          }
+        
+          .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+          }
+          
+          .button {
+            background-color: rgb(255, 62, 62);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 25px;
+            text-decoration: none;
+            margin: 5px;
+            cursor: pointer;
+            border: 2px solid rgb(255, 62, 62);
+          }
+          
+          .button:hover {
+            background-color: rgb(214, 55, 55);
+            font-size: 26px;
+          }
+          
+          .button:active {
+            transform: scale(0.9);
+            background-color: tomato;
+          }
+          
+          .Delete {
+            background-color: rgb(255, 62, 62);
+            color: #fff;
+            padding: 3px 3px; 
+            border-radius: 6px;
+            font-size: 25px;
+            cursor: pointer;
+            border: 2px solid rgb(255, 62, 62);
+          }
+          
+          .Delete:hover {
+            background-color: rgb(214, 55, 55);
+            font-size: 26px;
+          }
+          
+          /* Media Query für kleinere Bildschirmbreiten */
+          @media screen and (max-width: 768px) {
+            .button-container {
+              flex-direction: column;
+              align-items: center;
+            }
+          
+            .button, .Delete {
+              width: 20%; /* Vollständige Breite für kleinere Bildschirme */
+            }
+          }
+          
+          

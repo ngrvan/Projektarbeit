@@ -124,11 +124,10 @@
       </div>
     </div>
     
-    <div class="button">
-    <a href="/update/<%= objekt_Auftrag._id %>" id="update" >Update</a>
-    <button data-linkid="<%= objekt_Auftrag._id %>" class="Delete">
-      Löschen
-    </button>
+    <div class="button-container">
+      <a href="/update/<%= objekt_Auftrag._id %>" class="button" id="update">Update</a>
+      <button data-linkid="<%= objekt_Auftrag._id %>" class="button Delete">Löschen</button>
+    </div>
     
   </div>
     <%- include("./partials/footer.ejs") %>
